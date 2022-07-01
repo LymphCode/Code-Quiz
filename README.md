@@ -25,7 +25,7 @@
 
 ## Pictures of the code quiz
 
-![screenshot](https://github.com/LymphCode/Code-Quiz/blob/main/assets/images/04-web-apis-homework-demo.gif)
+![screenshot](https://github.com/LymphCode/Code-Quiz/blob/main/assets/images/Screenshot%20(1).png)
 
 
 ## link to deployed application
