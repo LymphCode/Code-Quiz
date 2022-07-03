@@ -23,7 +23,13 @@
 
 ## Pictures of the code quiz
 
-![screenshot](https://github.com/LymphCode/Code-Quiz/blob/main/assets/images/Screenshot%20(1).png)
+![screenshot1](https://github.com/LymphCode/Code-Quiz/blob/main/assets/images/screenshot-1.png)
+
+![screenshot2](https://github.com/LymphCode/Code-Quiz/blob/main/assets/images/screenshot-2.png)
+
+![screenshot3](https://github.com/LymphCode/Code-Quiz/blob/main/assets/images/screenshot-3.png)
+
+![screenshot4](https://github.com/LymphCode/Code-Quiz/blob/main/assets/images/screenshot-4.png)
 
 
 ## link to deployed application
