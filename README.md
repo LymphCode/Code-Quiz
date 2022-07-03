@@ -1,6 +1,6 @@
 # Code Quiz
 
--When I'm taking the code quiz
+-When I'm taking the quiz
 
 -I click the start button
 
@@ -14,13 +14,11 @@
 
 -The time is subtracted from the clock
 
--When all questions are answered or the timer reaches 0
-
--The game is over
+-When all questions are answered or the timer reaches 0 the game is over
 
 -When the game is over
 
--Then I can save my initials and my score
+-I can save my initials and score and view them when I click on View High Scores
 
 
 ## Pictures of the code quiz

@@ -14,15 +14,38 @@
 
         <div>
             <!-- this is the header bar of our content -->
-            <button id="top-bar">
-                <a href="high-score.html" id="high-score">View Highscore</a>
-                <p id="timer">Watch the clock!</p>
-                </button>
-        </div>
+                <a href="high-score.html" id="high-score">
+                    <button id="top-bar">View High Scores</button>
+                </a>
+                <!-- <p id="timer">Watch the clock!</p> -->
+            </div>
 
-        <!-- this contains the questionare's prompted to our site -->
-        <div class="quiz-container" id="quiz">
-            <div class="quiz-header">
+            <!-- this is our prompted welcome we get before the quiz begins -->
+            <div class="start-container" id="start">
+                <div class="start-header">
+                    <h2 id="intro">
+                        <ul>
+                            <li class="welcome">Welcome to the code quiz!</li>
+                            <li>You have four questions and 60 seconds to complete them</li>
+                            <li>If you answer incorrectly..</li>
+                            <li>You loose 15 seconds!</li>
+                            <li>If the time runs out..</li>
+                            <li>The game will end!</li>
+                            <li>Submit your initials at the end of the quiz and your score will be saved</li>
+                            <li>Check them out in "View High Scores"</li>
+                        </ul>
+                    </h2>               
+                </div>
+            
+                <!-- this is our start button -->
+                <button id="start-btn">Start</button>
+            
+            </div>
+
+            <!-- this contains the questionare's prompted to our site -->
+            <div class="quiz-container hide" id="quiz">
+                <div class="quiz-header">
+                <p id="timer">Watch the clock!</p>
                 <h2 id="question">Question Text</h2>
                 <ul>
                     <li>
@@ -49,10 +72,18 @@
             <button id="submit">Submit</button>
         
         </div>
+        <div class="quiz-container hide" id="score-form">
+            <h2 id="score-h2"></h2>
+            <form id="initials-form" class="initials">
+                <label for="initials">Initials:</label>
+                <input type="text" id="initials" name="initials">
+                <a href="high-score.html" class="initials">
+                    <input class="submit-btn" type="submit" value="Submit">
+                </a>
+            </form> 
+            <button onclick="location.reload()">Reload</button>       
+        </div>
     </div>
-
-
-
 
 
     <script src="assets/script/script.js"></script>

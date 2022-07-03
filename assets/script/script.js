@@ -37,19 +37,21 @@ const quizData = [
 
 
 // This gives us our countdown timer displayed above the questionare
-const countdown = 60;
-var time = countdown * 60;
+// const countdown = 60;
 
 const countdownEl = document.getElementById('timer');
+var time = 60;
 
-setInterval(updateCountDown, 1000);
 
 function updateCountDown() {
-    const sec = Math.floor(time / 1);
-    var seconds = time % 60;
-
-    countdownEl.innerHTML = `${seconds}`;
     time--;
+    if (time <= 0) {
+        time = 0;
+        countdownEl.innerHTML = `${time}`;
+        endGame();
+
+    }
+    countdownEl.innerHTML = `${time}`;
 }
 
 
@@ -62,13 +64,25 @@ const a_text = document.getElementById('a_text');
 const b_text = document.getElementById('b_text');
 const c_text = document.getElementById('c_text');
 const d_text = document.getElementById('d_text');
-const submitBtn = document.getElementById('submit')
-
+const submitBtn = document.getElementById('submit');
+const startBtn = document.getElementById('start-btn');
 
 var currentQuiz = 0;
 var score = 0;
 
-loadQuiz();
+startBtn.addEventListener('click', function () {
+
+    setInterval(updateCountDown, 1000);
+
+    var startEl = document.getElementById('start');
+    startEl.classList.add('hide');
+
+    quiz.classList.remove('hide');
+
+    loadQuiz();
+})
+
+// loadQuiz();
 
 function loadQuiz() {
 
@@ -90,35 +104,60 @@ function deselectAnswers() {
 function getSelected() {
     var answer
     answerEls.forEach(answerEls => {
-        if(answerEls.checked) {
+        if (answerEls.checked) {
             answer = answerEls.id
         }
     })
-    return answer 
+    return answer
 }
 
 
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
-    if(answer) {
+    console.log(answer);
+    if (answer) {
         if (answer === quizData[currentQuiz].correct) {
             score++
         }
-
-        currentQuiz++
-
-        if(currentQuiz < quizData.length) {
-            loadQuiz()
-        } else {
-            quiz.innerHTML = `
-            <h2>You answered ${score}/${quizData.length} questions correctly</h2>
-
-            <button onclick="location.reload()">Reload</button>
-            `
+        else {
+            time -= 15;
         }
+    } else {
+        return
     }
-}) 
+
+    currentQuiz++
+
+    if (currentQuiz === quizData.length) {
+        endGame() 
+    } else {
+        loadQuiz()
+    }
+})
+
+function endGame() {
+    quiz.innerHTML = '';
+    var h2 = document.querySelector('#score-h2');
+    
+    h2.innerText = `You answered ${score}/${quizData.length} questions correctly`
+
+    var form = document.querySelector('#score-form');
+
+    form.classList.remove('hide');
+}
+
+var highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+var initials_form = document.querySelector('#initials-form');
 
 
-
-
+initials_form.addEventListener('submit', function() {
+    var initials = document.querySelector('#initials');
+    var scoreObj = {
+        initials: initials.value,
+        score: score,
+    };
+    
+    highScores.push(scoreObj);  
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+})

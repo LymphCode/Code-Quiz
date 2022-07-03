@@ -4,16 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/high-score.css">
+    <title>High Scores!</title>
 </head>
 <body>
     <!-- 
     This is our Highscore page! Where we would have displayed data that has been submitted by the user..
     unfortunatly I have ran out of time for the evening and haven't got to it :(
     -->
-    <h1>Highscore</h1>
-    <button>
-        <a href="index.html">Return to home page</a>
-    </button>
+    <h1>High Scores</h1>
+    
+    <!-- create this list to be ordered from highest score = #1 to lowest score submitted from quiz -->
+    <div>
+        <ol id="high-score-list">
+
+        </ol>
+    </div>
+
+    <!-- <form class="initials">
+        <label for="initials">Initials:</label>
+        <input type="text" id="initials" name="initials">
+        <a href="high-score.html" class="initials">
+            <input class="submit-btn" type="submit" value="Submit">
+        </a>
+    </form> -->
+
+    <a class="home-page-btn" href="index.html">
+        <button>Return to home page</button>
+    </a>
+
+
+    <script src="assets/script/high-score.js"></script>
 </body>
 </html>
+
