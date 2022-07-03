@@ -1,4 +1,5 @@
 
+// this data is synced to our high-score.html page and pushes the users initials and score
 var highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
 var highScoresList = document.querySelector('#high-score-list');

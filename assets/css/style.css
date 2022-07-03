@@ -46,6 +46,14 @@ body {
     padding: 4rem;
 }
 
+#timer {
+    background-color: rgb(93, 0, 224);
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px;
+}
+
 h2 {
     padding: 1rem;
     text-align: center;
@@ -99,6 +107,14 @@ button:hover {
     border-radius: 0 0 10px 10px;
     box-shadow: 0 0 50px 8px rgba(67, 67, 67, 0.117);
 }
+
+.initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
 
 /* when button is clicked.. color is displayed.. note to self! (have an effect of red when answered incorrectly.. js detail??) */
 /* button:focus {

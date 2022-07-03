@@ -111,7 +111,7 @@ function getSelected() {
     return answer
 }
 
-
+// this data gives score points and time reduction
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
     console.log(answer);
@@ -135,10 +135,11 @@ submitBtn.addEventListener('click', () => {
     }
 })
 
+// this data gives us our score
 function endGame() {
     quiz.innerHTML = '';
     var h2 = document.querySelector('#score-h2');
-    
+
     h2.innerText = `You answered ${score}/${quizData.length} questions correctly`
 
     var form = document.querySelector('#score-form');
@@ -150,7 +151,7 @@ var highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
 var initials_form = document.querySelector('#initials-form');
 
-
+// this is our score submission data
 initials_form.addEventListener('submit', function() {
     var initials = document.querySelector('#initials');
     var scoreObj = {

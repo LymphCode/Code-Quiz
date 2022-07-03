@@ -17,7 +17,6 @@
                 <a href="high-score.html" id="high-score">
                     <button id="top-bar">View High Scores</button>
                 </a>
-                <!-- <p id="timer">Watch the clock!</p> -->
             </div>
 
             <!-- this is our prompted welcome we get before the quiz begins -->
@@ -27,10 +26,12 @@
                         <ul>
                             <li class="welcome">Welcome to the code quiz!</li>
                             <li>You have four questions and 60 seconds to complete them</li>
-                            <li>If you answer incorrectly..</li>
+                            <li>You cannot move on unless you submit an answer!</li>
+                            <li>If you answer them incorrectly..</li>
                             <li>You loose 15 seconds!</li>
                             <li>If the time runs out..</li>
                             <li>The game will end!</li>
+                            <br>
                             <li>Submit your initials at the end of the quiz and your score will be saved</li>
                             <li>Check them out in "View High Scores"</li>
                         </ul>
@@ -45,6 +46,7 @@
             <!-- this contains the questionare's prompted to our site -->
             <div class="quiz-container hide" id="quiz">
                 <div class="quiz-header">
+                    <!-- this is our timer! -->
                 <p id="timer">Watch the clock!</p>
                 <h2 id="question">Question Text</h2>
                 <ul>
@@ -72,6 +74,8 @@
             <button id="submit">Submit</button>
         
         </div>
+
+        <!-- this is our given score input section-->
         <div class="quiz-container hide" id="score-form">
             <h2 id="score-h2"></h2>
             <form id="initials-form" class="initials">
